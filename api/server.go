@@ -5,9 +5,9 @@ import (
 	"log"
 	"os"
 
+	"github.com/istiyawan/marketpasarjwt/api/controllers"
+	"github.com/istiyawan/marketpasarjwt/api/seed"
 	"github.com/joho/godotenv"
-	"github.com/marketpasarjwt/istiyawan/api/controllers"
-	"github.com/marketpasarjwt/istiyawan/api/seed"
 )
 
 var server = controllers.Server{}

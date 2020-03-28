@@ -3,8 +3,8 @@ package seed
 import (
 	"log"
 
+	"github.com/istiyawan/marketpasarjwt/api/models"
 	"github.com/jinzhu/gorm"
-	"github.com/marketpasarjwt/istiyawan/api/models"
 )
 
 var users = []models.User{

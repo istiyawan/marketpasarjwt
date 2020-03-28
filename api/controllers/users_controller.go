@@ -9,10 +9,10 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/marketpasarjwt/istiyawan/api/auth"
-	"github.com/marketpasarjwt/istiyawan/api/models"
-	"github.com/marketpasarjwt/istiyawan/api/responses"
-	"github.com/marketpasarjwt/istiyawan/api/utils/formaterror"
+	"github.com/istiyawan/marketpasarjwt/api/auth"
+	"github.com/istiyawan/marketpasarjwt/api/models"
+	"github.com/istiyawan/marketpasarjwt/api/responses"
+	"github.com/istiyawan/marketpasarjwt/api/utils/formaterror"
 )
 
 func (server *Server) CreateUser(w http.ResponseWriter, r *http.Request) {

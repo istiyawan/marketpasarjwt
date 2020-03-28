@@ -1,6 +1,6 @@
 package controllers
 
-import "github.com/marketpasarjwt/istiyawan/api/middlewares"
+import "github.com/istiyawan/marketpasarjwt/api/middlewares"
 
 func (s *Server) initializeRoutes() {
 

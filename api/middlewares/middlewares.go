@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/marketpasarjwt/istiyawan/api/auth"
-	"github.com/marketpasarjwt/istiyawan/api/responses"
+	"github.com/istiyawan/marketpasarjwt/api/auth"
+	"github.com/istiyawan/marketpasarjwt/api/responses"
 )
 
 func SetMiddlewareJSON(next http.HandlerFunc) http.HandlerFunc {
