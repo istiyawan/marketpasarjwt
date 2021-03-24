@@ -27,6 +27,7 @@ pipeline {
         }
 
         stage('Test') {
+            agent { label 'development'}
             steps {
                 withEnv(["PATH+GO=${GOPATH}/bin"]){
                     echo 'Running vetting'
