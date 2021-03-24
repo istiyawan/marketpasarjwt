@@ -1,5 +1,5 @@
 pipeline {
-    agent none 
+    agent any
     tools {
         go 'Go'
     }
@@ -33,7 +33,7 @@ pipeline {
                     sh 'go vet .'
                     echo 'Running linting'
                     sh 'golint .'
-                    echo 'Running test'
+                    echo 'Running tests'
                     sh 'cd tests/controllertest && go test -v'
                 }
             }
