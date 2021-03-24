@@ -1,5 +1,5 @@
 pipeline {
-    agent development 
+    agent none 
     tools {
         go 'Go'
     }
@@ -19,6 +19,7 @@ pipeline {
         }
         
         stage('Build') {
+            agent { label 'development'}
             steps {
                 echo 'Compiling and building'
                 sh 'go build'
