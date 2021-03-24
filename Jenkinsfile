@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent slave_1 
     tools {
         go 'Go'
     }
