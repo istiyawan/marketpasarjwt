@@ -26,3 +26,21 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 
 }
+
+func Database() {
+
+	var err error
+
+	TestDbDriver := os.Getenv("TestDbDriver")
+
+	if TestDbDriver == "postgres" {
+		DBURL := fmt.Sprintf("host=%s port=%s user=%s dbname=%s sslmode=disable password=%s", os.Getenv("TestDbHost"), os.Getenv("TestDbPort"), os.Getenv("TestDbUser"), os.Getenv("TestDbName"), os.Getenv("TestDbPassword"))
+		server.DB, err = gorm.Open(TestDbDriver, DBURL)
+		if err != nil {
+			fmt.Printf("Cannot connect to %s database\n", TestDbDriver)
+			log.Fatal("This is the error:", err)
+		} else {
+			fmt.Printf("We are connected to the %s database\n", TestDbDriver)
+		}
+	}
+}
