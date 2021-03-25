@@ -10,6 +10,7 @@ pipeline {
     }
     stages {        
         stage('Pre Test') {
+            agent { label 'development'}
             steps {
                 echo 'Installing dependencies'
                 sh 'go version'
